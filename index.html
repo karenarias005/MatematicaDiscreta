@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Programas Matemáticos</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px;
+            background: #DFBBCA;
+            color: black;
+        }
+        .programa { 
+            background: #774972; 
+            color: white; 
+            padding: 15px; 
+            margin: 10px 0; 
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .programa:hover { background: #5A384A; }
+        .definicion { 
+            background: #F5E6E8; 
+            padding: 15px; 
+            margin: 10px 0;
+            border-radius: 5px;
+            display: none;
+        }
+        .descarga { background: #8674C9; padding: 10px; margin: 5px 0; }
+    </style>
+</head>
+<body>
+    <h1>🎯 Programas Matemáticos</h1>
+    
+    <div class="programa" onclick="mostrarDefinicion('divisibilidad')">
+        🔢 Divisibilidad
+    </div>
+    <div id="divisibilidad" class="definicion">
+        <h3>Divisibilidad</h3>
+        <p>La divisibilidad estudia las condiciones bajo las cuales un número puede ser dividido exactamente por otro.</p>
+        <p><strong>Criterios:</strong> Por 2, 3, 4, 5, 7, 8, 9, 10</p>
+    </div>
+
+    <div class="programa" onclick="mostrarDefinicion('primos')">
+        🔢 Números Primos
+    </div>
+    <div id="primos" class="definicion">
+        <h3>Números Primos</h3>
+        <p>Los números primos son aquellos números naturales mayores que 1 que solo son divisibles por sí mismos y por 1.</p>
+    </div>
+
+    <div class="programa" onclick="mostrarDefinicion('tfa')">
+        📐 Teorema Fundamental Aritmética
+    </div>
+    <div id="tfa" class="definicion">
+        <h3>Teorema Fundamental de la Aritmética</h3>
+        <p>Todo número entero mayor que 1 puede representarse de manera única como producto de números primos.</p>
+    </div>
+
+    <div class="programa" onclick="mostrarDefinicion('recursividad')">
+        🔄 Recursividad
+    </div>
+    <div id="recursividad" class="definicion">
+        <h3>Recursividad</h3>
+        <p>Una función se define en términos de sí misma para resolver problemas divididos en subproblemas similares.</p>
+    </div>
+
+    <div class="programa" onclick="mostrarDefinicion('mcd')">
+        📊 MCD y MCM
+    </div>
+    <div id="mcd" class="definicion">
+        <h3>MCD y MCM</h3>
+        <p>Máximo Común Divisor y Mínimo Común Múltiplo usando el algoritmo de Euclides.</p>
+    </div>
+
+    <h2>📥 Descargar Código Python</h2>
+    <div class="descarga">
+        <a href="app.py" download style="color: white;">📦 app.py - Programa Principal</a>
+    </div>
+    <div class="descarga">
+        <a href="divisibilidad.py" download style="color: white;">📄 divisibilidad.py</a>
+    </div>
+    <div class="descarga">
+        <a href="primos.py" download style="color: white;">📄 primos.py</a>
+    </div>
+    <div class="descarga">
+        <a href="tfa.py" download style="color: white;">📄 tfa.py</a>
+    </div>
+    <div class="descarga">
+        <a href="recursividad.py" download style="color: white;">📄 recursividad.py</a>
+    </div>
+    <div class="descarga">
+        <a href="euclides.py" download style="color: white;">📄 euclides.py</a>
+    </div>
+
+    <script>
+        function mostrarDefinicion(id) {
+            // Ocultar todas
+            document.querySelectorAll('.definicion').forEach(el => {
+                el.style.display = 'none';
+            });
+            // Mostrar seleccionada
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
